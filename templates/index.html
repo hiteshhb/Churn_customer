@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <style>   
+       
+        body {
+          margin:0%;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #a5f4f45f;
+          background-position: center;
+          background-repeat: no-repeat;
+          top: 0%;
+          bottom: 0%;
+          height: 655px;
+          background-size: 100% 100%;
+          position: relative;
+          
+        }
+          
+        h1,h3,p {
+            text-align: left;
+            z-index: 10;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        form {
+            background-color: rgba(50, 111, 197, 0.807);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 10px;
+            width: 40%;
+            position: relative;
+            z-index: 3;
+        }
+
+        input[type=text],
+        select {
+            width: 150px;
+            padding: 1px 20px;
+            margin: 8px 0px;
+            display: inline-block;
+            border: 1px solid #170e0e92;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: small;
+            cursor: pointer;
+            height: 20px;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #cce42e;
+            display: inline;
+            color: rgba(3, 10, 1, 0.977);
+            font-weight: bold;
+            font-size: 15px;
+            padding: auto;
+            border: 1px solid #dee81e92;
+            border-radius: 10px;
+            cursor: pointer;
+            align-self: center;
+        }
+
+        legend,label {
+            display: inline;
+            margin-bottom: 0px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            border-color: rgb(12, 11, 9);
+        }
+
+        p {
+            text-align: center;
+            margin-top: 25px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            color: rgb(247, 237, 226);
+        }
+
+        input[type=radio] {
+            transform: scale(1.5);
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+    <body >
+        <h1> Customer Churn Prediction</h1>
+
+            <form method="GET" action ="/prediction" >
+            
+                <label>Age:</label>
+                <input type = "text" name = "Age" size="5px">
+                </select>
+
+                <br>
+
+                <label> Gender: </label>
+                <label for = "Gender">
+                <select name = "Gender" id="Gender">
+                        <option value = "Male">Male</option>
+                        <option value = "Female">Female</option>
+                </select>
+
+                <br>
+
+                <label> Location: </label>
+                <label for = "Location">
+                <select name = "Location" id="Location">
+                        <option value = "Houston">Houston</option>
+                        <option value = "Los Angeles">Los Angeles</option>
+                        <option value = "Miami">Miami</option>
+                        <option value = "Chicago">Chicago</option>
+                        <option value = "New York">New York</option>
+                </select>
+
+                <br>
+
+                <label>Subscription Length of Months:</label>
+                <input type = "text" name = "Subscription_Length_Months" size="5px">
+                </select>
+
+                <br>
+                
+                <label>Monthly Bill:</label>
+                <input type = "text" name = "Monthly_Bill" size="5px">
+                </select>
+
+                <br>
+                
+                <label>Total Usage (in GB):</label>
+                <input type = "text" name = "Total_Usage_GB" size="5px">
+                </select>
+
+                <br>
+
+                <p><input type = "submit" value = "SUBMIT" style="height:25px; width:120px; "></p>
+
+                <br>
+                <p> <b>{{ prediction }}</b> </p>
+
+            </form>
+    </body>
+    
+</html>

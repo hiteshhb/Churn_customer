@@ -1,0 +1,1 @@
+{"Gender": {"Female": 0, "Male": 1}, "columns": ["Age", "Gender", "Subscription_Length_Months", "Monthly_Bill", "Total_Usage_GB", "Location_Chicago", "Location_Houston", "Location_Los Angeles", "Location_Miami", "Location_New York"]}
